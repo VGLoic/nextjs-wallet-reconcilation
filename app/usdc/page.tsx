@@ -24,7 +24,7 @@ export default async function Usdc() {
       events.slice(0, 5).map((t) => ({
         from: t.args.from || "0x",
         to: t.args.to || "0x",
-        amount: formatUnits(t.args.value || 0n, 6),
+        amount: formatUnits(t.args.value ?? 0n, 6),
       })),
     );
 
